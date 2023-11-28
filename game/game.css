@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #353535;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-content {
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    width: 800px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.path {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.pikachu-gif {
+    width: 150px;
+    margin-bottom: 75px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.pokeball-gif {
+    width: 60px;
+    margin-bottom: 75px;
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(-1);
+    animation: pokeball-animation 1.5s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 500px;
+    margin-top: 20px;
+    position: absolute;
+    animation: clouds-animation 15s infinite linear;
+}
+
+.game-over {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+    box-shadow: 1px 1px 10px #00000039, -1px -1px 10px #00000039;
+}
+
+.game-over-title {
+    width: 400px;
+}
+
+.sad-pikachu {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.restart-button {
+    background-color: #ffd823;
+    width: 250px;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    box-shadow: inset 1px 1px 5px #00000039, inset -1px -1px 5px #00000039;
+}
+
+@keyframes pokeball-animation {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 150px;
+    }
+    50% {
+        bottom: 150px;
+    }
+    60% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
